@@ -42,7 +42,7 @@ Core.Callback.Register("vorp_herbs:CheckItemsCapacity", function(source, callbac
             local canCarryItem <const> = exports.vorp_inventory:canCarryItem(_source, item.name, item.count)
             if canCarryItem then
                 exports.vorp_inventory:addItem(_source, item.name, item.count)
-                Core.NotifyRightTip(_source, Config.Language.yougot .. item.count .. "x " .. item.label, 4000)
+                Core.NotifyAvanced(_source, Config.Language.yougot .. item.count .. "x " .. item.label, "inventory_items", value.icon, "COLOR_PURE_WHITE", 4000)
             else
                 Core.NotifyRightTip(_source, Config.Language.noenoughspace, 4000)
             end
