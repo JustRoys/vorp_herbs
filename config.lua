@@ -18,22 +18,23 @@ Config.Plants = {
     {                                               -- location that can be base game spawned and still pick it
         plantModel = "rdr_bush_dry_thin_ba_sim",    -- Plant model as a string
         name = "blueberry",                         -- Plant name to be displayed in prompt
-        reward = { "blueberry", "Blue_Berry_Seed" }, -- Plant db reward itemreward = {"Blueberry_Seed","Blueberry"}, add more items to the table for multiple items to be given
+        reward = { "blueberry", "Blueberry_Seed" }, -- Plant db reward itemreward = {"Blueberry_Seed","Blueberry"}, add more items to the table for multiple items to be given
         minReward = 1,                              -- Minimum reward per plant (optional, defaults to 1!)
         maxReward = 5,                              -- Maximum reward per plant (optional, defaults to 1!)
         cooldown = 1,                               -- Cooldown for this plant (in minutes)
         islocation = false,                         -- Is this a specific location?
         placeprop = false,                          -- Should a prop be placed at the coordinates?
+        --coords = vector3(2046.34, -829.13, 42.96),-- Only set coords when islocation or placeprop is true
         icon = "consumable_herb_black_berry"        -- Icon to show in notify
     },
-    {
+    {                                               -- location that sets prop
         name = "blueberry",
-        plantModel = "rdr_bush_dry_thin_ba_sim",
-        coords = vector3(2032.34, -818.2, 42.67),
-        reward = { "blueberry", "Blueberry_Seed" },
+        plantModel = "rdr_bush_dry_thin_ba_sim",    -- Plant model to spawn
+        coords = vector3(2032.34, -818.2, 42.67),   -- Coordinates for dirt mounds/reward item objects
+        reward = { "blueberry", "Blueberry_Seed" }, -- Plant db reward itemreward = {"Blueberry_Seed","Blueberry"}, add more items to the table for multiple items to be given
         minReward = 1,
         maxReward = 5,
-        cooldown = 1,
+        cooldown = 1, -- Cooldown for this plant (in minutes)
         islocation = true,
         placeprop = true,
         icon = "consumable_herb_black_berry"
@@ -336,17 +337,6 @@ Config.Plants = {
         icon = "upgrade_upg_mortar_pestle"
     },
     -- Orchard Near Saint Denis --
-    {
-        name = "Apple Tree",
-        reward = { "apple" },
-        minReward = 1,
-        maxReward = 5,
-        cooldown = 1,
-        coords = vector3(2027.04, -845.69, 43.03),
-        islocation = true,
-        placeprop = false,
-        icon = "consumable_apple"
-    },
     {
         name = "Orange Tree",
         reward = { "orange" },
